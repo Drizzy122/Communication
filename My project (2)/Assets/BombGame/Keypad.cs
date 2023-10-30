@@ -70,7 +70,7 @@ public class Keypad : MonoBehaviour
         keypadOB.SetActive(false);
         inv.SetActive(true);
         hud.SetActive(true);
-        player.GetComponent<PlayerController>().enabled = true;
+        player.GetComponent<PlayerController>().enabled = false;
     }
 
     public void Update()
@@ -82,11 +82,11 @@ public class Keypad : MonoBehaviour
         }
 
 
-        if(keypadOB.activeInHierarchy)
+        if (keypadOB.activeInHierarchy)
         {
             hud.SetActive(false);
             inv.SetActive(false);
-            player.GetComponent<PlayerController>().enabled = false;
+            player.GetComponent<PlayerController>().enabled = true;
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
