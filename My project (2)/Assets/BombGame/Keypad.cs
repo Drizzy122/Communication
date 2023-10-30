@@ -14,6 +14,7 @@ public class Keypad : MonoBehaviour
 
 
     public GameObject animateOB;
+    public GameObject keypadBomb;
     public Animator ANI;
 
 
@@ -25,6 +26,7 @@ public class Keypad : MonoBehaviour
     public AudioSource wrong;
 
     public bool animate;
+    
 
 
     void Start()
@@ -78,6 +80,7 @@ public class Keypad : MonoBehaviour
         if (textOB.text == "Right" && animate)
         {
             ANI.SetBool("animate", true);
+            keypadBomb.GetComponent<OpenKeyPad>().keypadDefused = true;
             Debug.Log("its open");
         }
 

@@ -7,7 +7,11 @@ public class OpenKeyPad : MonoBehaviour
     public GameObject keypadOB;
     public GameObject keypadText;
 
+    public GameObject[] Doors;
+
     public bool inReach;
+    public bool wireDefused;
+    public bool keypadDefused;
 
 
     void Start()
@@ -40,6 +44,16 @@ public class OpenKeyPad : MonoBehaviour
 
     void Update()
     {
+        Doors = GameObject.FindGameObjectsWithTag("door");
+
+        if(wireDefused && keypadDefused )
+        {
+            for(int i = 0; i < Doors.Length; i++)
+            {
+                Doors[i].GetComponent<Animator>().SetBool("Open", true);
+            }
+        }
+
         if(Input.GetButtonDown("Interact") && inReach)
         {
             keypadOB.SetActive(true);

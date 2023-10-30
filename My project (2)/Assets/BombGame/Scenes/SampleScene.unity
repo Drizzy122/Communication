@@ -1306,8 +1306,10 @@ GameObject:
   - component: {fileID: 60343174}
   - component: {fileID: 60343176}
   - component: {fileID: 60343175}
+  - component: {fileID: 60343178}
+  - component: {fileID: 60343177}
   m_Layer: 0
-  m_Name: Wire1
+  m_Name: GreenWireKeypad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1321,14 +1323,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 60343173}
   serializedVersion: 2
-  m_LocalRotation: {x: 1.886683e-17, y: 1.3830526e-18, z: 0.7776765, w: 0.6286647}
-  m_LocalPosition: {x: -0.01141965, y: 0.015683942, z: 0.0035098721}
-  m_LocalScale: {x: 0.038615786, y: 0.038615786, z: 0.012012193}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7776765, w: 0.6286647}
+  m_LocalPosition: {x: -0.011419648, y: 0.015683908, z: 0.0035098717}
+  m_LocalScale: {x: 0.03861578, y: 0.03861578, z: 0.012012193}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 246914181}
-  - {fileID: 1700691556}
-  m_Father: {fileID: 985061178}
+  m_Children: []
+  m_Father: {fileID: 728906880}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &60343175
 MeshRenderer:
@@ -1380,6 +1380,41 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 60343173}
   m_Mesh: {fileID: -8645697035111483952, guid: 962ebf12c2dbce5489f1eb1f510fe341, type: 3}
+--- !u!65 &60343177
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60343173}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.03705283, y: 0.035572816, z: 0.3289977}
+  m_Center: {x: 0.003276585, y: -0.0004098006, z: 0.15449981}
+--- !u!114 &60343178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60343173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 691bb4fd9e771e2458bcefabfe001256, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inReach: 0
+  Timers: []
 --- !u!43 &61585782
 Mesh:
   m_ObjectHideFlags: 0
@@ -3780,7 +3815,7 @@ Transform:
   m_GameObject: {fileID: 207857701}
   serializedVersion: 2
   m_LocalRotation: {x: 0.70710677, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.27, y: 0, z: 0}
   m_LocalScale: {x: -28.359062, y: -243.94931, z: -447.10352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3847,9 +3882,12 @@ GameObject:
   - component: {fileID: 209281119}
   - component: {fileID: 209281121}
   - component: {fileID: 209281120}
+  - component: {fileID: 209281122}
+  - component: {fileID: 209281123}
+  - component: {fileID: 209281124}
   m_Layer: 0
-  m_Name: Wire3.003
-  m_TagString: Untagged
+  m_Name: RedWireSwitch
+  m_TagString: wire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3862,12 +3900,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 209281118}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.69694567, y: 0.05008898, z: -0.009572687, w: -0.7153084}
-  m_LocalPosition: {x: -0.0102, y: -0.0139, z: -0.00082}
-  m_LocalScale: {x: 0.038883403, y: 0.015044466, z: 0.042613145}
+  m_LocalRotation: {x: -0.6969457, y: 0.050089035, z: -0.00957273, w: -0.7153084}
+  m_LocalPosition: {x: -0.010200004, y: -0.013900012, z: 0.0010900035}
+  m_LocalScale: {x: 0.0388834, y: 0.015044464, z: 0.042613138}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 985061178}
+  m_Father: {fileID: 1034000343}
   m_LocalEulerAnglesHint: {x: 86.395, y: -68.038, z: -63.2}
 --- !u!23 &209281120
 MeshRenderer:
@@ -3919,6 +3957,55 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 209281118}
   m_Mesh: {fileID: 8300664783958176625, guid: 962ebf12c2dbce5489f1eb1f510fe341, type: 3}
+--- !u!65 &209281122
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209281118}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.2856493, y: 0.06552415, z: 0.48658812}
+  m_Center: {x: 0.14185312, y: -0.043228846, z: 0.23544794}
+--- !u!114 &209281123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209281118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a07958f183ca234a9026e4cca5bf132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inReach: 0
+  ANI: {fileID: 353107461}
+  keypadBomb: {fileID: 5341254267595921655}
+--- !u!114 &209281124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209281118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58d28386524e6344c9bde0f0c6d0b680, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inReach: 0
 --- !u!1 &213648977
 GameObject:
   m_ObjectHideFlags: 0
@@ -4499,8 +4586,10 @@ GameObject:
   - component: {fileID: 223887976}
   - component: {fileID: 223887978}
   - component: {fileID: 223887977}
+  - component: {fileID: 223887980}
+  - component: {fileID: 223887979}
   m_Layer: 0
-  m_Name: Wire3.006
+  m_Name: GreenWireTimer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4514,12 +4603,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 223887975}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.16914925, y: 0.021753773, z: -0.5816182, w: 0.79538393}
-  m_LocalPosition: {x: -0.010352096, y: 0.000058804748, z: 0.008218134}
-  m_LocalScale: {x: 0.037539583, y: 0.039164297, z: 0.015734587}
+  m_LocalRotation: {x: 0.16914928, y: 0.021753788, z: -0.5816182, w: 0.79538393}
+  m_LocalPosition: {x: -0.010352091, y: 0.0034999796, z: 0.008218129}
+  m_LocalScale: {x: 0.037539586, y: 0.039164294, z: 0.015734587}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 985061178}
+  m_Father: {fileID: 349224235}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &223887977
 MeshRenderer:
@@ -4571,6 +4660,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 223887975}
   m_Mesh: {fileID: -2307054980111446077, guid: 962ebf12c2dbce5489f1eb1f510fe341, type: 3}
+--- !u!65 &223887979
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223887975}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.10949411, y: 0.15716887, z: 0.21364337}
+  m_Center: {x: 0.09395153, y: 0.063892506, z: 0.3257469}
+--- !u!114 &223887980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223887975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58d28386524e6344c9bde0f0c6d0b680, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inReach: 0
 --- !u!1 &234950023
 GameObject:
   m_ObjectHideFlags: 0
@@ -4861,8 +4984,10 @@ GameObject:
   - component: {fileID: 246914181}
   - component: {fileID: 246914183}
   - component: {fileID: 246914182}
+  - component: {fileID: 246914185}
+  - component: {fileID: 246914184}
   m_Layer: 0
-  m_Name: Wire2
+  m_Name: RedWireKeypad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4876,12 +5001,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 246914180}
   serializedVersion: 2
-  m_LocalRotation: {x: 1.5905942e-16, y: -1.1003153e-16, z: -0.2626752, w: 0.96488434}
-  m_LocalPosition: {x: -0.09232397, y: 0.019787474, z: 0}
-  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.5852333, w: 0.810865}
+  m_LocalPosition: {x: -0.011432563, y: -0.0015771212, z: 0.0035098717}
+  m_LocalScale: {x: 0.038615774, y: 0.03861578, z: 0.012012191}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 60343174}
+  m_Father: {fileID: 728906880}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &246914182
 MeshRenderer:
@@ -4933,6 +5058,94 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 246914180}
   m_Mesh: {fileID: 4773606174671046425, guid: 962ebf12c2dbce5489f1eb1f510fe341, type: 3}
+--- !u!65 &246914184
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246914180}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.037052818, y: 0.035572805, z: 0.32899767}
+  m_Center: {x: 0.0032784909, y: -0.0004098005, z: 0.1544998}
+--- !u!114 &246914185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246914180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 691bb4fd9e771e2458bcefabfe001256, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inReach: 0
+  Timers: []
+--- !u!1 &248609497
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 248609499}
+  - component: {fileID: 248609498}
+  m_Layer: 0
+  m_Name: wireEnd
+  m_TagString: Finish
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &248609498
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248609497}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 4.3891125, z: 3.4958723}
+  m_Center: {x: 0, y: -0.32234532, z: -0.29666364}
+--- !u!4 &248609499
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248609497}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.694, y: 1.788, z: -1.133}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &254151066
 Mesh:
   m_ObjectHideFlags: 0
@@ -6669,9 +6882,12 @@ GameObject:
   - component: {fileID: 344416908}
   - component: {fileID: 344416910}
   - component: {fileID: 344416909}
+  - component: {fileID: 344416911}
+  - component: {fileID: 344416912}
+  - component: {fileID: 344416913}
   m_Layer: 0
-  m_Name: Wire3.002
-  m_TagString: Untagged
+  m_Name: BlueWireSwitch
+  m_TagString: wire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6684,12 +6900,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 344416907}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.69694567, y: 0.05008898, z: -0.009572687, w: -0.7153084}
-  m_LocalPosition: {x: -0.0109, y: -0.0152, z: -0.00258}
-  m_LocalScale: {x: 0.038883403, y: 0.015044466, z: 0.042613145}
+  m_LocalRotation: {x: -0.6969457, y: 0.050089035, z: -0.00957273, w: -0.7153084}
+  m_LocalPosition: {x: -0.010899998, y: -0.015199972, z: -0.003020003}
+  m_LocalScale: {x: 0.0388834, y: 0.015044464, z: 0.042613138}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 985061178}
+  m_Father: {fileID: 1034000343}
   m_LocalEulerAnglesHint: {x: 86.395, y: -68.038, z: -63.2}
 --- !u!23 &344416909
 MeshRenderer:
@@ -6741,6 +6957,55 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 344416907}
   m_Mesh: {fileID: -5395112978433485024, guid: 962ebf12c2dbce5489f1eb1f510fe341, type: 3}
+--- !u!65 &344416911
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344416907}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.29687324, y: 0.06533163, z: 0.44260436}
+  m_Center: {x: 0.15206194, y: -0.020806426, z: 0.21461475}
+--- !u!114 &344416912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344416907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43a6f7caddfdf8e418b86ecf4710a4c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inReach: 0
+  Timers: []
+--- !u!114 &344416913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344416907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 691bb4fd9e771e2458bcefabfe001256, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inReach: 0
+  Timers: []
 --- !u!1 &346541816
 GameObject:
   m_ObjectHideFlags: 0
@@ -6846,6 +7111,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 346541816}
   m_Mesh: {fileID: -29785171406439458, guid: 962ebf12c2dbce5489f1eb1f510fe341, type: 3}
+--- !u!1 &349224234
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 349224235}
+  m_Layer: 0
+  m_Name: TimerWires
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &349224235
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349224234}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 428649950}
+  - {fileID: 223887976}
+  - {fileID: 1074470336}
+  m_Father: {fileID: 985061178}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &353107458
 GameObject:
   m_ObjectHideFlags: 0
@@ -6860,7 +7159,7 @@ GameObject:
   - component: {fileID: 353107459}
   m_Layer: 0
   m_Name: DoorLeft
-  m_TagString: Untagged
+  m_TagString: door
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6872,7 +7171,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 353107458}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70caa15783076c743b05ea11b4badf6c, type: 3}
   m_Name: 
@@ -8375,8 +8674,10 @@ GameObject:
   - component: {fileID: 428649950}
   - component: {fileID: 428649952}
   - component: {fileID: 428649951}
+  - component: {fileID: 428649954}
+  - component: {fileID: 428649953}
   m_Layer: 0
-  m_Name: Wire3.005
+  m_Name: BlueWireTimer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8390,12 +8691,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 428649949}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.1537572, y: -0.07377925, z: -0.05523956, w: 0.9838008}
-  m_LocalPosition: {x: -0.010816391, y: -0.0036395192, z: 0.006220436}
-  m_LocalScale: {x: 0.038053133, y: 0.03861579, z: 0.015734589}
+  m_LocalRotation: {x: 0.15375717, y: -0.07377924, z: -0.055239543, w: 0.98380077}
+  m_LocalPosition: {x: -0.0108163925, y: 0.0142000085, z: 0.006220441}
+  m_LocalScale: {x: 0.038053133, y: 0.03861579, z: 0.015734587}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 985061178}
+  m_Father: {fileID: 349224235}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &428649951
 MeshRenderer:
@@ -8447,6 +8748,41 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 428649949}
   m_Mesh: {fileID: -904709929214430585, guid: 962ebf12c2dbce5489f1eb1f510fe341, type: 3}
+--- !u!65 &428649953
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428649949}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.22460265, y: 0.068216175, z: 0.24256623}
+  m_Center: {x: 0.10517749, y: 0.06860473, z: 0.38979995}
+--- !u!114 &428649954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428649949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 691bb4fd9e771e2458bcefabfe001256, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inReach: 0
+  Timers: []
 --- !u!43 &429338085
 Mesh:
   m_ObjectHideFlags: 0
@@ -11483,7 +11819,7 @@ Transform:
   m_GameObject: {fileID: 631817009}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.19, y: 0, z: 0}
   m_LocalScale: {x: 1.9530971, y: 189.53273, z: 411.21927}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13162,6 +13498,7 @@ MonoBehaviour:
   hud: {fileID: 663972755}
   inv: {fileID: 2069050953}
   animateOB: {fileID: 1314287278}
+  keypadBomb: {fileID: 5341254267595921655}
   ANI: {fileID: 1314287281}
   textOB: {fileID: 205158095}
   answer: 123
@@ -13503,6 +13840,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 722605935}
   m_CullTransparentMesh: 1
+--- !u!1 &728906879
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 728906880}
+  m_Layer: 0
+  m_Name: KeypadWires
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &728906880
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728906879}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 246914181}
+  - {fileID: 1700691556}
+  - {fileID: 60343174}
+  m_Father: {fileID: 985061178}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &732843525
 GameObject:
   m_ObjectHideFlags: 0
@@ -14301,7 +14672,7 @@ GameObject:
   - component: {fileID: 823082988}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: timer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14339,6 +14710,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalTimeinSeconds: 200
   currentTime: 0
+  penalty: 30
   sceneName: SampleScene
   timer: {fileID: 823082989}
 --- !u!114 &823082989
@@ -17177,9 +17549,10 @@ GameObject:
   - component: {fileID: 985061176}
   - component: {fileID: 985061175}
   - component: {fileID: 985061174}
+  - component: {fileID: 985061179}
   m_Layer: 0
   m_Name: C4 (Wire
-  m_TagString: canPickUp
+  m_TagString: wireBomb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17295,22 +17668,33 @@ Transform:
   m_LocalScale: {x: 6.849056, y: 6.8490562, z: 22.017775}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1746519940}
-  - {fileID: 344416908}
-  - {fileID: 209281119}
-  - {fileID: 223887976}
-  - {fileID: 428649950}
-  - {fileID: 1074470336}
   - {fileID: 1702661010}
   - {fileID: 1013257384}
   - {fileID: 650519381}
   - {fileID: 346541817}
   - {fileID: 35390911}
-  - {fileID: 60343174}
   - {fileID: 1767709452}
   - {fileID: 335754300}
+  - {fileID: 349224235}
+  - {fileID: 1034000343}
+  - {fileID: 728906880}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: -90}
+--- !u!114 &985061179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985061172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84dd77cd46c060344b9ef695c27ddbdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wireCut: 0
+  keypadBomb: {fileID: 5341254267595921655}
+  ANI: {fileID: 353107461}
 --- !u!43 &988271004
 Mesh:
   m_ObjectHideFlags: 0
@@ -17924,6 +18308,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1013257383}
   m_Mesh: {fileID: -2952025416199785702, guid: 962ebf12c2dbce5489f1eb1f510fe341, type: 3}
+--- !u!1 &1034000342
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1034000343}
+  m_Layer: 0
+  m_Name: SwitchWires
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1034000343
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034000342}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1746519940}
+  - {fileID: 344416908}
+  - {fileID: 209281119}
+  m_Father: {fileID: 985061178}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1058080654
 Mesh:
   m_ObjectHideFlags: 0
@@ -18312,8 +18730,10 @@ GameObject:
   - component: {fileID: 1074470336}
   - component: {fileID: 1074470338}
   - component: {fileID: 1074470337}
+  - component: {fileID: 1074470340}
+  - component: {fileID: 1074470339}
   m_Layer: 0
-  m_Name: Wire3.004
+  m_Name: RedWireTimer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18327,12 +18747,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1074470335}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.1537572, y: -0.07377925, z: -0.05523956, w: 0.9838008}
-  m_LocalPosition: {x: -0.010026395, y: -0.00941952, z: 0.007026106}
-  m_LocalScale: {x: 0.038053133, y: 0.03861579, z: 0.015734589}
+  m_LocalRotation: {x: 0.15375717, y: -0.07377924, z: -0.055239543, w: 0.98380077}
+  m_LocalPosition: {x: -0.010026396, y: -0.01089998, z: 0.007026111}
+  m_LocalScale: {x: 0.038053133, y: 0.03861579, z: 0.015734587}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 985061178}
+  m_Father: {fileID: 349224235}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1074470337
 MeshRenderer:
@@ -18384,6 +18804,41 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1074470335}
   m_Mesh: {fileID: 6696972731883946158, guid: 962ebf12c2dbce5489f1eb1f510fe341, type: 3}
+--- !u!65 &1074470339
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074470335}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.22802845, y: 0.12601195, z: 0.16847177}
+  m_Center: {x: 0.11104706, y: 0.0048941993, z: 0.3538067}
+--- !u!114 &1074470340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074470335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 691bb4fd9e771e2458bcefabfe001256, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inReach: 0
+  Timers: []
 --- !u!1 &1082842900
 GameObject:
   m_ObjectHideFlags: 0
@@ -22000,7 +22455,7 @@ GameObject:
   - component: {fileID: 1314287282}
   m_Layer: 0
   m_Name: DoorRight
-  m_TagString: Untagged
+  m_TagString: door
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22070,7 +22525,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1314287278}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70caa15783076c743b05ea11b4badf6c, type: 3}
   m_Name: 
@@ -23477,6 +23932,59 @@ Transform:
   - {fileID: 1376742831}
   - {fileID: 811417609}
   m_Father: {fileID: 353107462}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1458168367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1458168369}
+  - component: {fileID: 1458168368}
+  m_Layer: 0
+  m_Name: keypadEnd
+  m_TagString: Finish
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1458168368
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458168367}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 4.3891125, z: 3.4958723}
+  m_Center: {x: 0, y: -0.32234532, z: -0.29666364}
+--- !u!4 &1458168369
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458168367}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.694, y: 1.788, z: 4.701}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1466320165
 GameObject:
@@ -25562,8 +26070,10 @@ GameObject:
   - component: {fileID: 1700691556}
   - component: {fileID: 1700691558}
   - component: {fileID: 1700691557}
+  - component: {fileID: 1700691560}
+  - component: {fileID: 1700691559}
   m_Layer: 0
-  m_Name: Wire3
+  m_Name: BlueWireKeypad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25577,12 +26087,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1700691555}
   serializedVersion: 2
-  m_LocalRotation: {x: 5.592091e-18, y: -3.543752e-16, z: -0.7776765, w: 0.6286647}
-  m_LocalPosition: {x: -0.13367741, y: 0.02865036, z: 0}
-  m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.011421345, y: -0.014528341, z: 0.0035098717}
+  m_LocalScale: {x: 0.03861579, y: 0.03861579, z: 0.012012191}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 60343174}
+  m_Father: {fileID: 728906880}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1700691557
 MeshRenderer:
@@ -25634,6 +26144,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1700691555}
   m_Mesh: {fileID: -2021342095117762569, guid: 962ebf12c2dbce5489f1eb1f510fe341, type: 3}
+--- !u!65 &1700691559
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700691555}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.037052825, y: 0.035572812, z: 0.32899767}
+  m_Center: {x: 0.0032782536, y: -0.00040980062, z: 0.1544998}
+--- !u!114 &1700691560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700691555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58d28386524e6344c9bde0f0c6d0b680, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inReach: 0
 --- !u!1 &1702661009
 GameObject:
   m_ObjectHideFlags: 0
@@ -26103,9 +26647,12 @@ GameObject:
   - component: {fileID: 1746519940}
   - component: {fileID: 1746519942}
   - component: {fileID: 1746519941}
+  - component: {fileID: 1746519943}
+  - component: {fileID: 1746519945}
+  - component: {fileID: 1746519946}
   m_Layer: 0
-  m_Name: Wire3.001
-  m_TagString: Untagged
+  m_Name: GreenWireSwitch
+  m_TagString: wire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26118,12 +26665,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1746519939}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.69694567, y: 0.05008898, z: -0.009572687, w: -0.7153084}
-  m_LocalPosition: {x: -0.0106, y: -0.0159, z: -0.00331}
-  m_LocalScale: {x: 0.038883407, y: 0.015044473, z: 0.04261316}
+  m_LocalRotation: {x: -0.6969457, y: 0.050089035, z: -0.00957273, w: -0.7153084}
+  m_LocalPosition: {x: -0.0106000025, y: -0.01590001, z: -0.0068099964}
+  m_LocalScale: {x: 0.038883403, y: 0.024999997, z: 0.042613156}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 985061178}
+  m_Father: {fileID: 1034000343}
   m_LocalEulerAnglesHint: {x: 86.395, y: -68.038, z: -63.2}
 --- !u!23 &1746519941
 MeshRenderer:
@@ -26175,6 +26722,55 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1746519939}
   m_Mesh: {fileID: -5676695835215276785, guid: 962ebf12c2dbce5489f1eb1f510fe341, type: 3}
+--- !u!114 &1746519943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746519939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 894ce9fe8301cb3428596b822428314b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inReach: 0
+  Timers: []
+--- !u!65 &1746519945
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746519939}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.29687327, y: 0.040460113, z: 0.39893478}
+  m_Center: {x: 0.15227948, y: -0.020079933, z: 0.19283707}
+--- !u!114 &1746519946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746519939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 691bb4fd9e771e2458bcefabfe001256, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inReach: 0
+  Timers: []
 --- !u!1 &1761683248
 GameObject:
   m_ObjectHideFlags: 0
@@ -27702,6 +28298,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1909803618}
+    - target: {fileID: 2701219356869981167, guid: 8b6fcabe628fabd4dbcfd32d82e6a8a8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -31.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 2701219356869981167, guid: 8b6fcabe628fabd4dbcfd32d82e6a8a8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.92
+      objectReference: {fileID: 0}
     - target: {fileID: 2713312060507284861, guid: 8b6fcabe628fabd4dbcfd32d82e6a8a8, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -40882,7 +41486,7 @@ GameObject:
   - component: {fileID: 1952709682}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: timer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40920,6 +41524,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalTimeinSeconds: 200
   currentTime: 0
+  penalty: 30
   sceneName: SampleScene
   timer: {fileID: 1952709683}
 --- !u!114 &1952709683
@@ -45860,7 +46465,7 @@ GameObject:
   - component: {fileID: 5517212696254269897}
   m_Layer: 0
   m_Name: C4 KeyPad
-  m_TagString: Untagged
+  m_TagString: keypadBomb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46085,7 +46690,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keypadOB: {fileID: 704600716}
   keypadText: {fileID: 1299063121}
+  Doors: []
   inReach: 0
+  wireDefused: 0
+  keypadDefused: 0
 --- !u!1 &5546449632337212091
 GameObject:
   m_ObjectHideFlags: 0
@@ -48768,3 +49376,5 @@ SceneRoots:
   - {fileID: 1314287279}
   - {fileID: 353107462}
   - {fileID: 1893225920}
+  - {fileID: 1458168369}
+  - {fileID: 248609499}

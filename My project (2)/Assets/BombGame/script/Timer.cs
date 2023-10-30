@@ -8,8 +8,10 @@ public class Timer : MonoBehaviour
 {
     public float totalTimeinSeconds = 60.0f;
     public float currentTime;
+    public float penalty = 30;
     public string sceneName;
     public TMP_Text timer;
+    
 
 
     public void Start()
@@ -34,6 +36,11 @@ public class Timer : MonoBehaviour
             Debug.Log("Quit");
         }
 
+    }
+
+    public void downTime()
+    {
+        currentTime -= penalty;
     }
 
     void timerEnded()
